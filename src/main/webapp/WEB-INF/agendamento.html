@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="pt-BR">
+    <head>
+        <title>Agendar Consulta</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* Estilos básicos */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f5f5f5;
+                color: #333;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 600px;
+                background-color: #fff;
+                padding: 2rem;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+
+            h2 {
+                text-align: center;
+                color: #3498db;
+                margin-bottom: 1rem;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+            }
+
+            input[type="text"],
+            input[type="number"],
+            input[type="date"],
+            input[type="time"],
+            select {
+                width: 100%;
+                padding: 0.75rem;
+                margin-bottom: 1rem;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+
+            .button {
+                width: 100%;
+                padding: 0.75rem;
+                background-color: #3498db;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 1rem;
+            }
+
+            .button:hover {
+                background-color: #2980b9;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Agendar Consulta</h2>
+            <form>
+                <!-- Nome Completo -->
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <!-- CPF -->
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" required>
+
+                <!-- Telefone 1 -->
+                <label for="telefone1">Telefone 1</label>
+                <input type="text" id="telefone1" name="telefone1" required>
+
+                <!-- Telefone 2 -->
+                <label for="telefone2">Telefone 2</label>
+                <input type="text" id="telefone2" name="telefone2">
+
+                <!-- Cartão do Convênio -->
+                <label for="cartaoConvenio">Número do Cartão do Convênio</label>
+                <input type="text" id="cartaoConvenio" name="cartaoConvenio">
+
+                <!-- Tipo de Consulta -->
+                <label for="tipoConsulta">Tipo de Consulta</label>
+                <select id="tipoConsulta" name="tipoConsulta" required>
+                    <option value="" disabled selected>Selecione o tipo de consulta</option>
+                    <option value="Cardiologia">Cardiologia</option>
+                    <option value="Dermatologia">Dermatologia</option>
+                    <option value="Ortopedia">Ortopedia</option>
+                    <!-- Outras opções podem ser adicionadas aqui -->
+                </select>
+                
+                <!-- Campo para consulta personalizada -->
+                <label for="consultaPersonalizada">Outro Tipo de Consulta (se aplicável)</label>
+                <input type="text" id="consultaPersonalizada" name="consultaPersonalizada" placeholder="Digite outro tipo de consulta">
+
+                <!-- Data da Consulta -->
+                <label for="dataConsulta">Data</label>
+                <input type="date" id="dataConsulta" name="dataConsulta" required>
+
+                <!-- Hora da Consulta -->
+                <label for="horaConsulta">Hora</label>
+                <input type="time" id="horaConsulta" name="horaConsulta" required>
+
+                <!-- Botão de Agendar -->
+                <button type="submit" class="button">Agendar</button>
+            </form>
+        </div>
+    </body>
+</html>
